@@ -1,0 +1,25 @@
+﻿<Window x:Class="Flappy_bird.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Flappy_bird"
+        mc:Ignorable="d"
+        Title="Flappy bird" Height="490" Width="525">
+    <Canvas Name="MyCanvas" Focusable="True" KeyDown="KeyIsDown" KeyUp="KeyIsUp" Background="AntiqueWhite">
+
+        <Image Height="145" Width="200" Source="Images/clouds.png" Canvas.Top="28" Tag="cloud" Canvas.Left="30" />
+        <Image Height="145" Width="200" Source="Images/clouds2.png" Canvas.Top="28" Tag="cloud" Canvas.Left="257" />
+
+        <Image Height="390" Width="66" Source="Images/pipeBottom.png" Canvas.Top="355" Canvas.Left="71" />
+        <Image Height="390" Width="66" Source="Images/pipeTop.png" Canvas.Top="-194" Canvas.Left="71" />
+
+        <Image Height="390" Width="66" Source="Images/pipeBottom.png" Canvas.Top="355" Canvas.Left="415" />
+        <Image Height="390" Width="66" Source="Images/pipeTop.png" Canvas.Top="-193" Canvas.Left="415" />
+
+        <Image Height="390" Width="66" Source="Images/pipeBottom.png" Canvas.Top="355" Canvas.Left="235" />
+        <Image Height="390" Width="66" Source="Images/pipeTop.png" Canvas.Top="-193" Canvas.Left="235" />
+
+
+    </Canvas>
+</Window>
