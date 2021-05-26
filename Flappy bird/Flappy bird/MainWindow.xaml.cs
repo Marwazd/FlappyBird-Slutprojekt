@@ -13,6 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+using System.Windows.Threading; //A threading namespace for the timer using System.Windows.Threading
+
 namespace Flappy_bird
 {
     /// <summary>
