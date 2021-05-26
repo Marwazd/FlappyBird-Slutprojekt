@@ -34,5 +34,15 @@ namespace Flappy_bird
         {
 
         }
+
+        private void StartGame() //StartGame will be loading all the default values for the game
+        {
+
+        }
+
+        private void EndGame() //EndGame will be called when the game ends
+        {
+
+        }
     }
 }
