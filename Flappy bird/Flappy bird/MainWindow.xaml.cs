@@ -22,6 +22,9 @@ namespace Flappy_bird
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        DispatcherTimer gameTimer = new DispatcherTimer(); //variable for the game
+
         public MainWindow()
         {
             InitializeComponent();
