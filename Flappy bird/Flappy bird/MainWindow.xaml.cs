@@ -33,6 +33,16 @@ namespace Flappy_bird
         public MainWindow()
         {
             InitializeComponent();
+
+            gameTimer.Tick += MainEventTimer;
+            gameTimer.Interval = TimeSpan.FromMilliseconds(20); //Makes the timer tick every 20 milliseconds
+            StartGame();
+
+        }
+
+        private void MainEventTimer(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         private void KeyIsDown(object sender, KeyEventArgs e)
