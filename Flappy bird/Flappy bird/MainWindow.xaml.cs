@@ -25,6 +25,11 @@ namespace Flappy_bird
 
         DispatcherTimer gameTimer = new DispatcherTimer(); //variable for the game
 
+        double score;
+        int gravity = 8;
+        bool gameOver;
+        Rect flappyBirdHitBox; //The Rect going to be used as a flappy bird hitbox and describe the height, width and the location of the bird to know when the bird hits the pipe
+
         public MainWindow()
         {
             InitializeComponent();
