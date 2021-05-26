@@ -8,17 +8,21 @@
         Title="Flappy bird" Height="490" Width="525">
     <Canvas Name="MyCanvas" Focusable="True" KeyDown="KeyIsDown" KeyUp="KeyIsUp" Background="AntiqueWhite">
 
-        <Image Height="145" Width="200" Source="Images/clouds.png" Canvas.Top="28" Tag="cloud" Canvas.Left="30" />
-        <Image Height="145" Width="200" Source="Images/clouds2.png" Canvas.Top="28" Tag="cloud" Canvas.Left="257" />
+        <Image Height="145" Width="200" Source="Images/clouds.png" Canvas.Top="74" Tag="cloud" Canvas.Left="10" />
+        <Image Height="145" Width="200" Source="Images/clouds2.png" Canvas.Top="122" Tag="cloud" Canvas.Left="301" />
 
-        <Image Height="390" Width="66" Source="Images/pipeBottom.png" Canvas.Top="355" Canvas.Left="71" />
-        <Image Height="390" Width="66" Source="Images/pipeTop.png" Canvas.Top="-194" Canvas.Left="71" />
+        <Image Height="390" Width="66" Source="Images/pipeBottom.png" Tag="Obs1" Canvas.Top="217" Canvas.Left="71" />
+        <Image Height="390" Width="66" Source="Images/pipeTop.png" Tag="Obs1" Canvas.Top="-316" Canvas.Left="71" />
 
-        <Image Height="390" Width="66" Source="Images/pipeBottom.png" Canvas.Top="355" Canvas.Left="415" />
-        <Image Height="390" Width="66" Source="Images/pipeTop.png" Canvas.Top="-193" Canvas.Left="415" />
+        <Image Height="390" Width="66" Source="Images/pipeBottom.png" Tag="Obs2" Canvas.Top="267" Canvas.Left="415" />
+        <Image Height="390" Width="66" Source="Images/pipeTop.png" Tag="Obs2" Canvas.Top="-283" Canvas.Left="415" />
 
-        <Image Height="390" Width="66" Source="Images/pipeBottom.png" Canvas.Top="355" Canvas.Left="235" />
-        <Image Height="390" Width="66" Source="Images/pipeTop.png" Canvas.Top="-193" Canvas.Left="235" />
+        <Image Height="390" Width="66" Source="Images/pipeBottom.png" Tag="Obs3" Canvas.Top="306" Canvas.Left="235" />
+        <Image Height="390" Width="66" Source="Images/pipeTop.png" Tag="Obs3" Canvas.Top="-252" Canvas.Left="235" />
+
+        <Image Name="flappyBird" Height="36" Width="50" Source="Images/flappyBird.png" Stretch="Fill" Canvas.Left="24" Canvas.Top="144" />
+
+        <Label Name="txtScore" FontSize="22" FontWeight="ExtraBold" Content="Score:0" />
 
 
     </Canvas>
