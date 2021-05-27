@@ -46,16 +46,53 @@ namespace Flappy_bird
 
             flappyBirdHitBox = new Rect(Canvas.GetLeft(flappyBird), Canvas.GetTop(flappyBird), flappyBird.Width, flappyBird.Height); //this will always update the position of the bird and will know exactly where the bird is
 
-            Canvas.SetTop(flappyBird, Canvas.GetTop(flappyBird) + gravity); //the value of the gravity will pull the bird down, when its minus it will push the bird up
+            Canvas.SetTop(flappyBird, Canvas.GetTop(flappyBird) + gravity);//the value of the gravity will pull the bird down, when its minus it will push the bird up
+
+            if (Canvas.GetTop(flappyBird) < -10 || Canvas.GetTop(flappyBird) > 458)
+            {
+                EndGame();
+            }
 
 
+            foreach (var x in MyCanvas.Children.OfType<Image>())
+            {
+                if ((String)x.Tag == "Obs1" || (String)x.Tag == "Obs2" || (String)x.Tag == "Obs3")
+                {
+                    Canvas.SetLeft(x, Canvas.GetLeft(x) - 5); //the pipe speed
+
+                    if (Canvas.GetLeft(x) < -100)
+                    {
+                        Canvas.SetLeft(x, 800);
+
+                        score += .5;
+                    }
+
+                    Rect pipeHitBox = new Rect(Canvas.GetLeft(x), Canvas.GetTop(x), x.Width, x.Height);
+
+                    if (flappyBirdHitBox.IntersectsWith(pipeHitBox))
+                    {
+                        EndGame();
+                    }
+                }
+
+                if ((String)x.Tag == "cloud")
+                {
+                    Canvas.SetLeft(x, Canvas.GetLeft(x) - 2);
+
+                    if (Canvas.GetLeft(x) < -250)
+                    {
+                        Canvas.SetLeft(x, 550);
+                    }
+                }
+            }
+       
         }
 
         private void KeyIsDown(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.Space)
             {
-                flappyBird.RenderTransform = new RotateTransform(-20, flappyBird.Width / 2, flappyBird.Height / 2); //this will rotate the bird slightly up when the space key is pressed to signify the bird flying upwards. By dividing the birds width and height with 2, the bird will start moving from the center of the canvas
+                flappyBird.RenderTransform = new RotateTransform(-20, flappyBird.Width /2, flappyBird.Height / 2); //this will rotate the bird slightly up when the space key is pressed to signify the bird flying upwards. By dividing the birds width and height with 2, the bird will start moving from the center of the canvas
                 gravity = -8;
             }
             if (e.Key == Key.R && gameOver == true) 
@@ -111,7 +148,9 @@ namespace Flappy_bird
 
         private void EndGame() //EndGame will be called when the game ends
         {
-
+            gameTimer.Stop();
+            gameOver = true;
+            txtScore.Content += "Gamer Over! Klick R to restart";
         }
     }
 }

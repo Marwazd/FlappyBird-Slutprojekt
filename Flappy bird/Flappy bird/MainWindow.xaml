@@ -20,7 +20,7 @@
         <Image Height="390" Width="66" Source="Images/pipeBottom.png" Tag="Obs3" Canvas.Top="306" Canvas.Left="235" />
         <Image Height="390" Width="66" Source="Images/pipeTop.png" Tag="Obs3" Canvas.Top="-252" Canvas.Left="235" />
 
-        <Image Name="flappyBird" Height="36" Width="50" Source="Images/flappyBird.png" Stretch="Fill" Canvas.Left="24" Canvas.Top="190"/>
+        <Image Name="flappyBird" Height="36" Width="50" Source="Images/flappyBird.png" Stretch="Fill" Canvas.Left= "34" Canvas.Top="190"/>
 
         <Label Name="txtScore" FontSize="22" FontWeight="ExtraBold" Content="Score:0" />
 
