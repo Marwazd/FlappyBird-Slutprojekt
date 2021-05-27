@@ -121,15 +121,15 @@ namespace Flappy_bird
 
             foreach (var x in MyCanvas.Children.OfType<Image>()) //foreach loop going to run loop through any image element
             {
-                if ((string)x.Tag == "obs1")
+                if ((string)x.Tag == "Obs1")
                 {
                     Canvas.SetLeft(x, 500);
                 }
-                if ((string)x.Tag == "obs2")
+                if ((string)x.Tag == "Obs2")
                 {
                     Canvas.SetLeft(x, 800);
                 }
-                if ((string)x.Tag == "obs3")
+                if ((string)x.Tag == "Obs3")
                 {
                     Canvas.SetLeft(x, 1100);
                 }
