@@ -42,7 +42,7 @@ namespace Flappy_bird
 
         private void MainEventTimer(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            
         }
 
         private void KeyIsDown(object sender, KeyEventArgs e)
@@ -57,6 +57,38 @@ namespace Flappy_bird
 
         private void StartGame() //StartGame will be loading all the default values for the game
         {
+
+            MyCanvas.Focus(); //this function will keep the canvas element in focus when the game runs
+
+            int temp = 300;
+
+            score = 0;
+
+            gameOver = false;
+            Canvas.SetTop(flappyBird, 190); //the default value of the bird
+
+            foreach (var x in MyCanvas.Children.OfType<Image>()) //foreach loop going to run loop through any image element
+            {
+                if ((string)x.Tag == "obs1")
+                {
+                    Canvas.SetLeft(x, 500);
+                }
+                if ((string)x.Tag == "obs2")
+                {
+                    Canvas.SetLeft(x, 800);
+                }
+                if ((string)x.Tag == "obs3")
+                {
+                    Canvas.SetLeft(x, 1100);
+                }
+                if ((string)x.Tag == "cloud")
+                {
+                    Canvas.SetLeft(x, 300 + temp);
+                    temp = 800;
+                }
+            }
+
+
 
         }
 
