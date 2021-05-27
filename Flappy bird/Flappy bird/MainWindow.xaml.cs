@@ -150,7 +150,7 @@ namespace Flappy_bird
         {
             gameTimer.Stop();
             gameOver = true;
-            txtScore.Content += "Gamer Over! Klick R to restart";
+            txtScore.Content += " Gamer Over! Klick R to restart";
         }
     }
 }
