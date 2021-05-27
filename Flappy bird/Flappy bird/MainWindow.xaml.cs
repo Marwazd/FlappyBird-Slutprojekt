@@ -47,7 +47,15 @@ namespace Flappy_bird
 
         private void KeyIsDown(object sender, KeyEventArgs e)
         {
-
+            if (e.Key == Key.Space)
+            {
+                flappyBird.RenderTransform = new RotateTransform(-20, flappyBird.Width / 2, flappyBird.Height / 2); //this will rotate the bird slightly up when the space key is pressed to signify the bird flying upwards. By dividing the birds width and height with 2, the bird will start moving from the center of the canvas
+                gravity = -8;
+            }
+            if (e.Key == Key.R && gameOver == true) 
+            {
+                StartGame(); //When the R key is pressed and the game is over, this function will set up everything again on the screen
+            }
         }
 
         private void KeyIsUp(object sender, KeyEventArgs e)
@@ -88,6 +96,8 @@ namespace Flappy_bird
                 }
             }
 
+
+            gameTimer.Start();
 
 
         }
