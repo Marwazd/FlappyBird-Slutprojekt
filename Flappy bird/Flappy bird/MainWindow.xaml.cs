@@ -60,7 +60,8 @@ namespace Flappy_bird
 
         private void KeyIsUp(object sender, KeyEventArgs e)
         {
-
+            flappyBird.RenderTransform = new RotateTransform(5, flappyBird.Width / 2, flappyBird.Height / 2); 
+            gravity = 8;
         }
 
         private void StartGame() //StartGame will be loading all the default values for the game
