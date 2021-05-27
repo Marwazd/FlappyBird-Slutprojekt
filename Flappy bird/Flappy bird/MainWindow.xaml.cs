@@ -42,7 +42,13 @@ namespace Flappy_bird
 
         private void MainEventTimer(object sender, EventArgs e)
         {
-            
+            txtScore.Content = "Score: " + score; //this will always update the score
+
+            flappyBirdHitBox = new Rect(Canvas.GetLeft(flappyBird), Canvas.GetTop(flappyBird), flappyBird.Width, flappyBird.Height); //this will always update the position of the bird and will know exactly where the bird is
+
+            Canvas.SetTop(flappyBird, Canvas.GetTop(flappyBird) + gravity); //the value of the gravity will pull the bird down, when its minus it will push the bird up
+
+
         }
 
         private void KeyIsDown(object sender, KeyEventArgs e)
